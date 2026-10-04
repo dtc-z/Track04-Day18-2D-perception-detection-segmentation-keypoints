@@ -1,0 +1,80 @@
+{
+  "progress": {
+    "box_iou": "ok",
+    "nms": "ok",
+    "batched_nms": "ok",
+    "average_precision": "ok",
+    "mask_iou": "ok",
+    "polygon_to_mask": "ok",
+    "mask_to_yolo_seg": "ok",
+    "autolabel": "ok",
+    "oks": "ok",
+    "joint_angle": "ok",
+    "FLIP_IDX": "ok"
+  },
+  "latency": [
+    {
+      "Cấu hình": "one-to-many + NMS, conf 0.25",
+      "preprocess (ms)": 1.54,
+      "inference (ms)": 13.49,
+      "postprocess (ms)": 1.43,
+      "số box": 5
+    },
+    {
+      "Cấu hình": "one-to-many + NMS, conf 0.001",
+      "preprocess (ms)": 1.15,
+      "inference (ms)": 9.64,
+      "postprocess (ms)": 1.4,
+      "số box": 203
+    },
+    {
+      "Cấu hình": "one-to-one NMS-free, conf 0.25",
+      "preprocess (ms)": 1.21,
+      "inference (ms)": 10.16,
+      "postprocess (ms)": 0.54,
+      "số box": 5
+    },
+    {
+      "Cấu hình": "one-to-one NMS-free, conf 0.001",
+      "preprocess (ms)": 1.25,
+      "inference (ms)": 9.7,
+      "postprocess (ms)": 0.51,
+      "số box": 203
+    }
+  ],
+  "result_4b": {
+    "flip_idx": "giải phẫu",
+    "epochs": 40,
+    "imgsz": 640,
+    "Box mAP50-95": 0.9169816711590297,
+    "Pose mAP50": 0.995,
+    "Pose mAP50-95": 0.4365689028287507,
+    "train (phút)": 3.7
+  },
+  "result_4c": [
+    {
+      "Model": "flip_idx giải phẫu",
+      "Pose mAP50-95 — val gốc": 0.4365689028287507,
+      "Pose mAP50-95 — val lật gương": 0.4086994393474752
+    }
+  ],
+  "answers": {
+    "Q1": "",
+    "Q2": "",
+    "Q3": "",
+    "Q4": "",
+    "Q5": "",
+    "Q6": "",
+    "Q7": "",
+    "Q8": "",
+    "Q9": "",
+    "Q10": "",
+    "Q11": "",
+    "Q12": ""
+  },
+  "env": {
+    "device": "cuda",
+    "torch": "2.14.1+cu130",
+    "ultralytics": "8.4.171"
+  }
+}
